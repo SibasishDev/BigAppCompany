@@ -10,16 +10,14 @@ const EVERY_MINUTE = '* * * * * ';
 
 const jobSchedule = async () => {
 
-    /**
-     * job schedule for deleting token
-     * @author Sibasish Das <sibasishdas@globussoft.in>
-     */
-
     cron.schedule(EVERY_MINUTE, async () => {
         try {
             let cuurentTime = Math.floor(new Date().getTime() / 1000);
+
             const data = await mailModel.usersToMail(cuurentTime);
+
             let status;
+            
             for (let user of data) {
                 let msg = {
                     to: user.email,
