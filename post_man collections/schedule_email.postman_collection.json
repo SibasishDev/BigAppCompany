@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "3c98d227-2a17-43f2-88aa-245e36e08000",
+		"name": "schedule_email",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22371759"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/mail/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6ImRlNmYxYzQyLTUwMzQtNGNiYS04ZGVjLTg0MzY1Nzc0NjNjMCIsImlhdCI6MTY2MzQ0MTg5OSwiZXhwIjoxNjYzNDQ1NDk5fQ.VdIop6avTzwiRzDQl0wLBWVC8DU2QIoE2jMpknq3Yl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dassibasishdas@gmail.com\",\r\n    \"message\" : \"hello Sibasish\",\r\n    \"schTime\" : \"2022-11-02 20:50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/mail/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6ImRlNmYxYzQyLTUwMzQtNGNiYS04ZGVjLTg0MzY1Nzc0NjNjMCIsImlhdCI6MTY2MzQ0MTg5OSwiZXhwIjoxNjYzNDQ1NDk5fQ.VdIop6avTzwiRzDQl0wLBWVC8DU2QIoE2jMpknq3Yl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 25,\r\n    \"schTime\" : \"2022-11-02 20:51\",\r\n    \"message\" : \"hello Sibasish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/mail/getlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6ImRlNmYxYzQyLTUwMzQtNGNiYS04ZGVjLTg0MzY1Nzc0NjNjMCIsImlhdCI6MTY2MzQ0MTg5OSwiZXhwIjoxNjYzNDQ1NDk5fQ.VdIop6avTzwiRzDQl0wLBWVC8DU2QIoE2jMpknq3Yl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 23,\r\n    \"email\" : \"dassibasishdas@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/unsentlist",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"unsentlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/mail/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6ImRlNmYxYzQyLTUwMzQtNGNiYS04ZGVjLTg0MzY1Nzc0NjNjMCIsImlhdCI6MTY2MzQ0MTg5OSwiZXhwIjoxNjYzNDQ1NDk5fQ.VdIop6avTzwiRzDQl0wLBWVC8DU2QIoE2jMpknq3Yl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/mail/unsentlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6ImRlNmYxYzQyLTUwMzQtNGNiYS04ZGVjLTg0MzY1Nzc0NjNjMCIsImlhdCI6MTY2MzQ0MTg5OSwiZXhwIjoxNjYzNDQ1NDk5fQ.VdIop6avTzwiRzDQl0wLBWVC8DU2QIoE2jMpknq3Yl0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 23,\r\n    \"email\" : \"dassibasishdas@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/unsentlist",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"unsentlist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

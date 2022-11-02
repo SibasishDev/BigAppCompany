@@ -1,6 +1,4 @@
 const sgMail = require('@sendgrid/mail');
-const e = require('express');
-require('dotenv').config();
 sgMail.setApiKey('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');
 
 exports.sendMail = (msg) => {
@@ -9,7 +7,6 @@ exports.sendMail = (msg) => {
         if (err) {
            resolve(false);
         }
-        console.log('mail sent');
         resolve(true)
     });
 })

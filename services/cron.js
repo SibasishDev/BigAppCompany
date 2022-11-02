@@ -17,11 +17,10 @@ const jobSchedule = async () => {
 
     cron.schedule(EVERY_MINUTE, async () => {
         try {
-            console.log("cron started========")
             let cuurentTime = Math.floor(new Date().getTime() / 1000);
             const data = await mailModel.usersToMail(cuurentTime);
+            let status;
             for (let user of data) {
-                console.log(user);
                 let msg = {
                     to: user.email,
                     from: 'dassibasishdas@gmail.com',
@@ -29,15 +28,16 @@ const jobSchedule = async () => {
                     html: user.message,
                 };
                 let ifMailSent = await sendMail(msg);
-                console.log(ifMailSent);
+                if(ifMailSent){
+                    let update = await mailModel.updateIsMailsent(user.id, status = 1);
+                }
+
                 if (!ifMailSent) {
-                    console.log(ifMailSent);
-                    let update = await mailModel.updateIsMailsent(user.id);
+                    let update = await mailModel.updateIsMailsent(user.id,status = 2);
                 }
             }
 
         } catch (error) {
-            console.log('error')
             console.log(error);
         }
     })
